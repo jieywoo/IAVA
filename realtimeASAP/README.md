@@ -3,7 +3,7 @@
 The real-time ASAP system is a part of the ASAP-Greta module.\
 It computes the ASAP model for every frame and passes the generated agent's nonverbal features to the Greta platform for display.
 
-## Requirements:
+## Requirements
 - OpenFace extracting user's visual features (AUs, pose, gaze) streaming in real-time via ZeroMQ;
 - Greta platform executing with the configuration of "Greta - ASR ASAP.xml";
 - Environment requirements:
@@ -16,20 +16,20 @@ It computes the ASAP model for every frame and passes the generated agent's nonv
   - soundfile 0.10.3.post1
   - opensmile 2.4.1
 
-## Scripts:
+## Scripts
 - "realtime_ASAP.py": main script to compute ASAP and communicate with the Greta platform in real-time;
 - "ASAP.py": ASAP model functions;
 - "smoothingFilter.py": smoothing filter function;
 - "recnumpy2wav.py": converts recorded audio signals to a WAV file.
 
-## Configuration files:
+## Configuration files
 - "config.ini": main configuration file (Socket connection configs of IP and port, ASAP model configs, openSMILE parameters);
 - "opensmile_realtime.conf": configuration of openSMILE.
 
-## Pretrained model:
+## Pretrained model
 - "ASAP_pretrainedWeights.hdf5": pretrained weights of ASAP model.
 
-## Outputs:
+## Outputs
 "realtime_ASAP.py" renders 2 output CSV files.
 It records the audio signal of the user along with OpenFace and openSMILE features extracted from the user and agent for each frame (every 0.04s). 
 
