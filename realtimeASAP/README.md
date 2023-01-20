@@ -5,7 +5,7 @@ It computes the ASAP model for every frame and passes the generated agent's nonv
 
 ## Requirements
 - OpenFace extracting user's visual features (AUs, pose, gaze) streaming in real-time via ZeroMQ;
-- Greta platform executing with the configuration of "Greta - ASR ASAP.xml";
+- Greta platform executing with the configuration of "Greta-ASAP-Cereproc.xml" or "Greta - ASR ASAP.xml";
 - Environment requirements:
   - Python 3.9.7
   - Tensorflow 2.4.1
