@@ -26,7 +26,7 @@ The user speech is transcripted for every phrase using an Automatic Speech Recog
 The new fuctionalities includes:
  - Automatic Speech Recognition (ASR): [GRETA ASR](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
  Sending the phrase transcript of the user's speech obtained via ASR to the Greta platform. 
- - Feedback module of Flipper2.0: [GRETA ASR](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
+ - Feedback module of Flipper2.0: [GRETA Flipper2.0](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
  Verifying wheither the Greta agent has finished talking its previous speech before launching the next one.
  
  A scenario script can be written with the aforementionned functionalities in: [project location]\bin\Common\Data\FlipperResources\templates".
