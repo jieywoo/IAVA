@@ -63,5 +63,5 @@ A pop-up window of ASAP will be shown. Launch the socket connection after enteri
 After opening the configuration file, start by opening the ASR window. Using the Google Chrome navigator (in an incognito window), launch the ASR system.\
 After like the previous configuration, launch the socket connection after entering your IP address (please leave the port number as it is).
 
-For both configurations, the whole system starts working when the real-time ASAP system is launched. Please follow the real-time ASAP system instructions [realtimeASAP instructions](https://github.com/jieywoo/ASAP-Greta/blob/main/realtimeASAP/README.md).
+For both configurations, the whole system starts working when the real-time ASAP system is launched. Please follow the [real-time ASAP system instructions](https://github.com/jieywoo/ASAP-Greta/blob/main/realtimeASAP/README.md).
 
