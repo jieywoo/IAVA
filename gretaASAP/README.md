@@ -38,6 +38,8 @@ The new fuctionalities includes:
  The passed user speech transcript is passed to the automatic thought classifier (when activated) which computes if it is an automatic thought or not. The next scenario phrase is selected and spoken depending on this result.\
  This part can be easily modified and applied to any other scenario that requires the result of an external program.
  
+ The scripts of the external program can be placed in: "[project location]\bin\Scripts".
+ 
  ## Instructions:
 To start, the components must be added to the Greta platform.
  - "asap" directory -> "[project location]\auxiliary\ASAP\src\greta\auxiliary"
@@ -46,6 +48,9 @@ To start, the components must be added to the Greta platform.
  - "CharacterManager.java" -> "[project location]\core\Util\src\greta\core\util"
  - "Speech.java" -> "[project location]\core\Util\src\greta\core\util\speech"
  - "Audio.java" -> "[project location]\core\Util\src\greta\core\util\audio"
+ - "ASRInputManager.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
+ - "FeedbackReceiver.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
+ - "FeedbackManager.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
  - "build.xml" -> "[project location]\auxiliary\ASAP" 
  - "build-impl.xml" -> "[project location]\auxiliary\ASAP\nbproject"
  - "project.properties.xml" -> "[project location]\auxiliary\ASAP\nbproject"
