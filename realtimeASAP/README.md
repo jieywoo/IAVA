@@ -42,7 +42,7 @@ record OpenFace and openSMILE features of the user and agent with features liste
     - OF: [' pose_Rx', ' pose_Ry', ' pose_Rz', ' AU01_r', ' AU02_r', ' AU04_r', ' AU05_r', ' AU06_r', ' AU07_r', ' AU12_r', ' gaze_angle_x', ' gaze_angle_y']
     - OS: ['voiceProb', 'F0env', 'loudness', 'mfcc[0]', 'mfcc[1]', 'mfcc[2]', 'mfcc[3]', 'mfcc[4]', 'mfcc[5]', 'mfcc[6]', 'mfcc[7]', 'mfcc[8]', 'mfcc[9]', 'mfcc[10]', 'mfcc[11]', 'mfcc[12]']
 
-## Usage instructions
+## Usage guide
 To run the real-time ASAP system, OpenFace and the Greta platform must be running before launching the main script of "realtime_ASAP.py".
 
 Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is) in: *config.ini*\
