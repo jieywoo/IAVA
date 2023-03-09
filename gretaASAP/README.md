@@ -40,7 +40,7 @@ The new fuctionalities includes:
  
  The scripts of the external program can be placed in: "[project location]\bin\Scripts".
  
- ## Instructions:
+ ## Integration instructions:
 To start, the components must be added to the Greta platform.
  - "asap" directory -> "[project location]\auxiliary\ASAP\src\greta\auxiliary"
  - "ASAPServer.java" -> "[project location]\core\Intentions\src\greta\core\intentions"
@@ -58,6 +58,7 @@ To start, the components must be added to the Greta platform.
  
 The configuration files ("Greta-ASAP-Cereproc.xml" and "Greta - ASR ASAP.xml") in the "configurations" directory must also be included in: "[project location]\bin\Configurations\Greta".
 
+## Usage instructions:
 After the verification of the inclusion of all files, the system can be executed.\
 Launching the Greta platform with one of the configuration files.
 
