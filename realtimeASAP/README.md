@@ -45,7 +45,7 @@ record OpenFace and openSMILE features of the user and agent with features liste
 ## Instructions
 To run the real-time ASAP system, OpenFace and the Greta platform must be running before launching the main script of "realtime_ASAP.py".
 
-Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is).\
+Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is) in: *config.ini*\
 After launching the ASAP socket communication within the Greta platform, run the system.
 
 To run the system, run with:
