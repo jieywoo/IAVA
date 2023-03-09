@@ -58,7 +58,7 @@ To start, the components must be added to the Greta platform.
  
 The configuration files ("Greta-ASAP-Cereproc.xml" and "Greta - ASR ASAP.xml") in the "configurations" directory must also be included in: "[project location]\bin\Configurations\Greta".
 
-## Usage instructions:
+## Usage guide:
 After the verification of the inclusion of all files, the system can be executed.\
 Launching the Greta platform with one of the configuration files.
 
