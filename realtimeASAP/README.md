@@ -31,7 +31,7 @@ It computes the ASAP model for every frame and passes the generated agent's nonv
 
 ## Outputs
 "realtime_ASAP.py" renders 2 output CSV files.
-It records the audio signal of the user along with OpenFace and openSMILE features extracted from the user and agent for each frame (every 0.04s). 
+It records the audio signals of the user along with OpenFace and openSMILE features extracted from the user and agent for each frame (every 0.04s). 
 
 - "userAudio_asnumpy.csv":
 record the audio signals of the user and can be converted in WAV file using "recnumpy2wav.py"
