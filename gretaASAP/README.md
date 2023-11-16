@@ -29,7 +29,8 @@ New functionalities include:
  - Feedback module of Flipper2.0: [GRETA Flipper2.0](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
  Verifying whether the Greta agent has finished talking its previous speech before launching the next one.
  
- A scenario script can be written with the aforementioned functionalities in: [project location]\bin\Common\Data\FlipperResources\templates".
+ A scenario script can be written with the aforementioned functionalities in: \
+ [project location]\bin\Common\Data\FlipperResources\templates".
  
 
 ## Flipper2.0 - External program Link
@@ -38,7 +39,8 @@ New functionalities include:
  The passed user speech transcript is passed to the automatic thought classifier (when activated) which computes if it is an automatic thought or not. The next scenario phrase is selected and spoken depending on this result.\
  This part can be easily modified and applied to any other scenario that requires the result of an external program.
  
- The scripts of the external program can be placed in: "[project location]\bin\Scripts".
+ The scripts of the external program can be placed in: \
+ "[project location]\bin\Scripts".
  
  ## Integration instructions:
 To start, the components must be added to the Greta platform.
