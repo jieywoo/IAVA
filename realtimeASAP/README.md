@@ -1,7 +1,7 @@
-# Real-time ASAP system
+# Real-time Perception and Generation (PerceptNGen) module of the IAVA system
 
-The real-time ASAP system is a part of the ASAP-Greta module.\
-It computes the ASAP model for every frame and passes the generated agent's nonverbal features to the Greta platform for display.
+The real-time Perception and Generation (PerceptNGen) module is a part of the IAVA system.\
+It computes the user multimodal signal perception and the agent behavior generation (via the ASAP model for every frame) and passes the generated agent's nonverbal features to the Greta platform for display.
 
 ## Requirements
 - OpenFace extracting user's visual features (AUs, pose, gaze) streaming in real-time via ZeroMQ;
@@ -17,7 +17,7 @@ It computes the ASAP model for every frame and passes the generated agent's nonv
   - opensmile 2.4.1
 
 ## Scripts
-- "realtime_ASAP.py": main script to compute ASAP and communicate with the Greta platform in real-time;
+- "realtime_ASAP.py": main script to perceive the user's multimodal signals (OpenFace and openSMILE), compute agent behavior via ASAP, and communicate with the Greta platform in real-time;
 - "ASAP.py": ASAP model functions;
 - "smoothingFilter.py": smoothing filter function;
 - "recnumpy2wav.py": converts recorded audio signals to a WAV file.
@@ -43,7 +43,7 @@ record OpenFace and openSMILE features of the user and agent with features liste
     - OS: ['voiceProb', 'F0env', 'loudness', 'mfcc[0]', 'mfcc[1]', 'mfcc[2]', 'mfcc[3]', 'mfcc[4]', 'mfcc[5]', 'mfcc[6]', 'mfcc[7]', 'mfcc[8]', 'mfcc[9]', 'mfcc[10]', 'mfcc[11]', 'mfcc[12]']
 
 ## Usage guide
-To run the real-time ASAP system, OpenFace and the Greta platform must be running before launching the main script of "realtime_ASAP.py".
+To run the real-time ASAP system, OpenFace, and the Greta platform must be running before launching the main script of "realtime_ASAP.py".
 
 Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is) in: *config.ini*\
 After launching the ASAP socket communication within the Greta platform, run the system.
