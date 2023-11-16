@@ -1,17 +1,42 @@
-# ASAP-Greta
-ASAP-Greta module (awaiting to be integrated into the [Greta Main GITHUB](https://github.com/isir/greta/tree/gpl-grimaldi))
+# Interactive and Adaptive Virtual Agent (IAVA)
+Code of Interactive and Adaptive Virtual Agent (IAVA) system, IVA 2023.\
+Full Paper: "IAVA: Interactive and Adaptive Virtual Agent" [IVA 2023].\
+Demo Paper: "Conducting Cognitive Behavioral Therapy with an Adaptive Virtual Agent" [IVA 2023].
 
-The ASAP-Greta module consists of two parts:
-- [realtimeASAP](https://github.com/jieywoo/ASAP-Greta/tree/main/realtimeASAP): computes the ASAP model in real-time and sends agent's nonverbal generations to the Greta platform for the display
-- [gretaASAP](https://github.com/jieywoo/ASAP-Greta/tree/main/gretaASAP): contains ASAP-Greta module elements which needs to be integrated into the Greta platform
+## Description of IAVA
+IAVA is an interactive virtual agent system that generates real-time adaptive behaviors in response to its human interlocutor.\
+It ensures the two aspects:
+- generating real-time adaptive behavior,
+- managing natural dialogue.
+
+The agent adapts to its interlocutor linguistically (choosing its next conversational move via the dialogue manager including a LLM based automatic thought classifier) and nonverbally (displaying reciprocally adaptive facial gestures via the [ASAP](https://github.com/jieywoo/ASAP/tree/main) model).
+
+Cognitive Behavioral Therapy (CBT) is chosen as our proof-of-concept, the agent acts as a therapist helping human users detect their negative automatic thoughts.
+
+## Demo video
+A dyadic interaction between a human user and an adaptive CBT agent simulated via our IAVA system. The system loop consisting of user multimodal signal perception, agent behavior generation, signal communication, and visualization is assured to the frame level of 25 fps.
+
+[![IAVA DEMO](https://github.com/jieywoo/IAVA/assets/44306168/a4cea035-26f4-4574-ad81-9b3145cfaa98)](http://www.youtube.com/watch?v=9aZeSUxhf60)
+Please click to see the full demo video.
+
+## CBT-HAI Database
+A database of 60 CBT human-agent interactions has been collected using the IAVA system.\
+<img src="https://github.com/jieywoo/IAVA/assets/44306168/6ae520d3-b78e-4a77-a0fb-f9d03399a52f" alt="drawing" width="200"/>
+
+If you are interested in the CBT HAI DB, please contact the authors of the IAVA system.
+
+## Instructions
+IAVA consists of 2 main modules:
+- [realtimeASAP](https://github.com/jieywoo/ASAP-Greta/tree/main/realtimeASAP): computes the user multimodal signal perception and the agent behavior generation (via ASAP model) in real-time and sends the agent's nonverbal generations to the Greta platform for the display,
+- [gretaASAP](https://github.com/jieywoo/ASAP-Greta/tree/main/gretaASAP): contains IAVA elements of real-time signal communication and visualization which needs to be integrated into the Greta platform ([Greta Main GITHUB](https://github.com/isir/greta/tree/gpl-grimaldi)).
 
 Each section will be detailed in the sub-readme files within each part's directory.
 
-## Integration
+### Integration
 Please follow the integration instructions in each sub-readme files.
 
 ## Usage guide
-To use the system, please follow in following instruction:
+To use the system, please follow in following instructions:
 1. Launch OpenFace streaming with ZeroMQ.\
    Select the "Record" options of :
     - Record AUs
