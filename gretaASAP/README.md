@@ -1,35 +1,35 @@
-# Greta ASAP integration
+# IAVA for Greta (IAVA4Greta)
 
-The Greta ASAP integration is a part of the ASAP-Greta module which needs to be integrated interally to the Greta platform.\
-It receives the generated generated agent's nonverbal features of the ASAP model for every frame (from the real-time ASAP system) and displays them via the Greta virtual agent.
+The IAVA for Greta (IAVA4Greta) of the IAVA system which needs to be integrated internally into the Greta platform.\
+It receives the generated agent's nonverbal features of the ASAP model for every frame (from the Perception and Generation (PerceptNGen) module) and displays them via the Greta virtual agent.
 
 ## Requirements:
  - Greta platform: [GRETA GITHUB](https://github.com/isir/greta)
 
 ## Configuration:
-The configuration file of the system is: "Greta-ASAP-Cereproc.xml".
+The configuration file of the system is: "Greta-IAVA-Cereproc.xml".
 
-![asap-greta_config_asap](https://user-images.githubusercontent.com/44306168/213601696-225e9a5e-6d93-46ef-a9c0-b6b182e884b8.png)
+![IAVA_config](https://user-images.githubusercontent.com/44306168/213601696-225e9a5e-6d93-46ef-a9c0-b6b182e884b8.png)
 
 The generated agent's nonverbal features can be selected to be visualized or not via an interactive window.
 
-![asap-greta_window](https://user-images.githubusercontent.com/44306168/213602148-510a2438-47eb-4afe-b230-5b45888fa4b8.png)
+![IAVA_window](https://user-images.githubusercontent.com/44306168/213602148-510a2438-47eb-4afe-b230-5b45888fa4b8.png)
 
 ## ASR & Flipper2.0 Feedback
-Additional functionalities were added to the configuration file which is: "Greta - ASR ASAP.xml".\
+Additional functionalities were added to the configuration file which is: "Greta - ASR IAVA.xml".\
 They were added in order to allow the Greta virtual agent to interact with the user automatically.
 
-The user speech is transcripted for every phrase using an Automatic Speech Recognition (ASR) system and the phrase transcript is passed to the Greta platform via ActiveMQ. The phrase transcript can be used to select the next phrase that will be said by the agent. After verifying that the user has terminated to speak, the Greta agent speaks the prescripted speech (while also verifying that its previous speech has been terminated).
+The user speech is transcripted for every phrase using an Automatic Speech Recognition (ASR) system and the phrase transcript is passed to the Greta platform via ActiveMQ. The phrase transcript can be used to select the next phrase that will be said by the agent. After verifying that the user has been terminated to speak, the Greta agent speaks the prescripted speech (while also verifying that its previous speech has been terminated).
 
-![asap-greta_config](https://user-images.githubusercontent.com/44306168/213603260-4ef7439b-2033-4632-a066-78eb75ee2051.png)
+![IAVA_config](https://user-images.githubusercontent.com/44306168/213603260-4ef7439b-2033-4632-a066-78eb75ee2051.png)
 
-The new fuctionalities includes:
+New functionalities include:
  - Automatic Speech Recognition (ASR): [GRETA ASR](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
  Sending the phrase transcript of the user's speech obtained via ASR to the Greta platform. 
  - Feedback module of Flipper2.0: [GRETA Flipper2.0](https://github.com/isir/greta/wiki/ASR-Flipper2.0-MeaningMiner-Integration-Demo)\
- Verifying wheither the Greta agent has finished talking its previous speech before launching the next one.
+ Verifying whether the Greta agent has finished talking its previous speech before launching the next one.
  
- A scenario script can be written with the aforementionned functionalities in: [project location]\bin\Common\Data\FlipperResources\templates".
+ A scenario script can be written with the aforementioned functionalities in: [project location]\bin\Common\Data\FlipperResources\templates".
  
 
 ## Flipper2.0 - External program Link
@@ -42,32 +42,32 @@ The new fuctionalities includes:
  
  ## Integration instructions:
 To start, the components must be added to the Greta platform.
- - "asap" directory -> "[project location]\auxiliary\ASAP\src\greta\auxiliary"
- - "ASAPServer.java" -> "[project location]\core\Intentions\src\greta\core\intentions"
- - "ASAPSimpleAUPerformer.java" -> "[project location]\core\Signals\src\greta\core\keyframes\face"
+ - "iava" directory -> "[project location]\auxiliary\IAVA\src\greta\auxiliary"
+ - "IAVAServer.java" -> "[project location]\core\Intentions\src\greta\core\intentions"
+ - "IAVASimpleAUPerformer.java" -> "[project location]\core\Signals\src\greta\core\keyframes\face"
  - "CharacterManager.java" -> "[project location]\core\Util\src\greta\core\util"
  - "Speech.java" -> "[project location]\core\Util\src\greta\core\util\speech"
  - "Audio.java" -> "[project location]\core\Util\src\greta\core\util\audio"
  - "ASRInputManager.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
  - "FeedbackReceiver.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
  - "FeedbackManager.java" -> "[project location]\auxiliary\DialogueManager\FlipperDemoExample\src\greta\FlipperDemo\input"
- - "build.xml" -> "[project location]\auxiliary\ASAP" 
- - "build-impl.xml" -> "[project location]\auxiliary\ASAP\nbproject"
- - "project.properties.xml" -> "[project location]\auxiliary\ASAP\nbproject"
- - "project.xml" -> "[project location]\auxiliary\ASAP\nbproject"
+ - "build.xml" -> "[project location]\auxiliary\IAVA" 
+ - "build-impl.xml" -> "[project location]\auxiliary\IAVA\nbproject"
+ - "project.properties.xml" -> "[project location]\auxiliary\IAVA\nbproject"
+ - "project.xml" -> "[project location]\auxiliary\IAVA\nbproject"
  
-The configuration files ("Greta-ASAP-Cereproc.xml" and "Greta - ASR ASAP.xml") in the "configurations" directory must also be included in: "[project location]\bin\Configurations\Greta".
+The configuration files ("Greta-IAVA-Cereproc.xml" and "Greta - ASR IAVA.xml") in the "configurations" directory must also be included in: "[project location]\bin\Configurations\Greta".
 
 ## Usage guide:
 After the verification of the inclusion of all files, the system can be executed.\
 Launching the Greta platform with one of the configuration files.
 
-### "Greta-ASAP-Cereproc.xml"
-A pop-up window of ASAP will be shown. Launch the socket connection after entering your IP address (please leave the port number as it is).
+### "Greta-IAVA-Cereproc.xml"
+A pop-up window of IAVA will be shown. Launch the socket connection after entering your IP address (please leave the port number as it is).
 
-### "Greta - ASR ASAP.xml"
+### "Greta - ASR IAVA.xml"
 After opening the configuration file, start by opening the ASR window. Using the Google Chrome navigator (in an incognito window), launch the ASR system.\
 After like the previous configuration, launch the socket connection after entering your IP address (please leave the port number as it is).
 
-For both configurations, the whole system starts working when the real-time ASAP system is launched. Please follow the [real-time ASAP system instructions](https://github.com/jieywoo/ASAP-Greta/blob/main/realtimeASAP/README.md).
+For both configurations, the whole system starts working when the PerceptNGen module is launched. Please follow the [PerceptNGen module instructions](https://github.com/jieywoo/ASAP-Greta/blob/main/realtimeASAP/README.md).
 
