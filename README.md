@@ -33,7 +33,7 @@ IAVA consists of 2 main modules:
 Each section will be detailed in the sub-readme files within each part's directory.
 
 ### Integration
-Please follow the integration instructions in each sub-readme files.
+Please follow the integration instructions in each sub-readme file.
 
 ## Usage guide
 To use the system, please follow in following instructions:
