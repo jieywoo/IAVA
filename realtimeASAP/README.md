@@ -17,7 +17,7 @@ It computes the user multimodal signal perception and the agent behavior generat
   - opensmile 2.4.1
 
 ## Scripts
-- "realtime_ASAP.py": main script to perceive the user's multimodal signals (OpenFace and openSMILE), compute agent behavior via ASAP, and communicate with the Greta platform in real-time;
+- "realtime_PerceptNGen.py": main script to perceive the user's multimodal signals (OpenFace and openSMILE), compute agent behavior via ASAP, and communicate with the Greta platform in real-time;
 - "ASAP.py": ASAP model functions;
 - "smoothingFilter.py": smoothing filter function;
 - "recnumpy2wav.py": converts recorded audio signals to a WAV file.
@@ -30,7 +30,7 @@ It computes the user multimodal signal perception and the agent behavior generat
 - "ASAP_pretrainedWeights.hdf5": pretrained weights of ASAP model.
 
 ## Outputs
-"realtime_ASAP.py" renders 2 output CSV files.
+"realtime_PerceptNGen.py" renders 2 output CSV files.
 It records the audio signals of the user along with OpenFace and openSMILE features extracted from the user and agent for each frame (every 0.04s). 
 
 - "userAudio_asnumpy.csv":
@@ -43,14 +43,14 @@ record OpenFace and openSMILE features of the user and agent with features liste
     - OS: ['voiceProb', 'F0env', 'loudness', 'mfcc[0]', 'mfcc[1]', 'mfcc[2]', 'mfcc[3]', 'mfcc[4]', 'mfcc[5]', 'mfcc[6]', 'mfcc[7]', 'mfcc[8]', 'mfcc[9]', 'mfcc[10]', 'mfcc[11]', 'mfcc[12]']
 
 ## Usage guide
-To run the real-time ASAP system, OpenFace, and the Greta platform must be running before launching the main script of "realtime_ASAP.py".
+To run the real-time ASAP system, OpenFace, and the Greta platform must be running before launching the main script of "realtime_PerceptNGen.py".
 
 Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is) in: *config.ini*\
 After launching the ASAP socket communication within the Greta platform, run the system.
 
 To run the system, run with:
 ```
-python realtime_ASAP.py
+python realtime_PerceptNGen.py
 ```
 
 After closing the system program, the output CSV files will be available.
