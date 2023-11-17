@@ -36,7 +36,7 @@ New functionalities include:
  For the Cognitive Behavioral Therapy (CBT) scenario, we built a French BERT-based (LLM-based) automatic thought classifier (ATcls) model based on [Shidara+2022](https://www.frontiersin.org/articles/10.3389/fcomp.2022.762424/full)'s work to identify if the user's utterance is an automatic thought. The ATcls renders a binary result indicating whether the user utterance is an automatic thought or not.
 
  The same CBT scenario, translated and culturally adapted into French, was used as in the work of [Shidara+2022](https://www.frontiersin.org/articles/10.3389/fcomp.2022.762424/full).\
- The French CBT scenario can be found in the "fmltemplates" directory:
+ The French CBT scenario can be found in the "fmltemplates" directory: \
  "[project location]\bin\Common\Data\FlipperResources\fmltemplates"
  
 ## Flipper2.0 - External Program (CBT ATcls) Link
@@ -67,7 +67,8 @@ To start, the components must be added to the Greta platform.
  - "fmltemplates" directory -> "[project location]\bin\Common\Data\FlipperResources"
  - "templates" directory -> "[project location]\bin\Common\Data\FlipperResources"
  
-The configuration files ("Greta-IAVA-Cereproc.xml" and "Greta - ASR IAVA.xml") in the "configurations" directory must also be included in: "[project location]\bin\Configurations\Greta".
+The configuration files ("Greta-IAVA-Cereproc.xml" and "Greta - ASR IAVA.xml") in the "configurations" directory must also be included in: \
+"[project location]\bin\Configurations\Greta".
 
 ## Usage guide:
 After the verification of the inclusion of all files, the system can be executed.\
