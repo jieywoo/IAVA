@@ -15,7 +15,7 @@
  * along with Greta.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
-package greta.auxiliary.asap;
+package greta.auxiliary.iava;
 
 import greta.core.animation.mpeg4.bap.BAPFrame;
 import greta.core.animation.mpeg4.bap.BAPFrameEmitter;
@@ -159,7 +159,7 @@ public class AUParserFilesReader extends FAPFrameEmitterImpl implements AUEmitte
 
         File f = new File(csvFile);
         if (f.exists()) {
-            length = loadASAP(csvFile);
+            length = loadIAVA(csvFile);
         }
         if (length == 0) {
             Logs.warning("File invalid: " + f.getAbsolutePath());
@@ -174,7 +174,7 @@ public class AUParserFilesReader extends FAPFrameEmitterImpl implements AUEmitte
 
     //Format based on https://github.com/TadasBaltrusaitis/OpenFace
     //timestamp, gaze_0_x, gaze_0_y, gaze_0_z, gaze_1_x, gaze_1_y, gaze_1_z, gaze_angle_x, gaze_angle_y, pose_Tx, pose_Ty, pose_Tz, pose_Rx, pose_Ry, pose_Rz, AU01_r, AU02_r, AU04_r, AU05_r, AU06_r, AU07_r, AU09_r, AU10_r, AU12_r, AU14_r, AU15_r, AU17_r, AU20_r, AU23_r, AU25_r, AU26_r, AU45_r, AU01_c, AU02_c, AU04_c, AU05_c, AU06_c, AU07_c, AU09_c, AU10_c, AU12_c, AU14_c, AU15_c, AU17_c, AU20_c, AU23_c, AU25_c, AU26_c, AU28_c, AU45_c
-    public int loadASAP(String line_data) {
+    public int loadIAVA(String line_data) {
         Logs.info(String.format(this.getClass().getSimpleName() + ".loadOpenFace(%s)",line_data));
        // System.out.println("line");
        
@@ -738,7 +738,7 @@ public class AUParserFilesReader extends FAPFrameEmitterImpl implements AUEmitte
 
         int p = 0;
         for (BAPFramePerformer performer : bap_perfomers) {
-            System.out.println("[INFO]:greta.auxiliary.asap.AUParserFilesReader.send()");
+            System.out.println("[INFO]:greta.auxiliary.iava.AUParserFilesReader.send()");
             performer.performBAPFrames(curr_bap_frames, id);
         }
         bapFrameEmitterImpl.sendBAPFrames(id, curr_bap_frames);

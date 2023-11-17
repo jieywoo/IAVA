@@ -260,8 +260,8 @@ public class Audio {
      * Saves this {@code Audio} in a specific file.
      * @param fileName the name of the target file.
      */
-    public void save(String fileName,boolean asap) throws IOException{
-        save(fileName, null,asap);
+    public void save(String fileName,boolean iava) throws IOException{
+        save(fileName, null,iava);
     }
 
     /**
@@ -269,13 +269,13 @@ public class Audio {
      * @param fileName the name of the target file.
      * @param targetFormat the wanted audio format.
      */
-    public void save(String fileName, AudioFormat targetFormat, boolean asap) throws IOException{
+    public void save(String fileName, AudioFormat targetFormat, boolean iava) throws IOException{
         save(new File(fileName), targetFormat);
         save(new File(fileName.replace("output","output1")), targetFormat);
-        System.out.println("greta.core.util.audio.Audio.save() "+fileName+"  "+asap+ "  "+ System.getProperty("user.dir")+"\\"+fileName);
+        System.out.println("greta.core.util.audio.Audio.save() "+fileName+"  "+iava+ "  "+ System.getProperty("user.dir")+"\\"+fileName);
         
-        if(asap){
-        //put opensmile code for ASAP 
+        if(iava){
+        //put opensmile code for IAVA 
         Thread thread = new Thread(){
             public void run(){
                 try {

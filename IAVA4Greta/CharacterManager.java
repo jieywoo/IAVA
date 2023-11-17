@@ -36,7 +36,7 @@ import java.util.logging.Logger;
  * or can be set as the character to use currently with {@code setCharacter(String)}.<br/>
  * If a parameter of the current character is changed or if an other character is set, all {@code CharacterDependent} added
  * with {@code add(CharacterDependent)} will be informed that a change occurs.
- * Includes the verification check of the state of ASAP (enabled or not)
+ * Includes the verification check of the state of IAVA (enabled or not)
  * @author Andre-Marie Pez
  * @author Fajrian Yunus
  * @author Jieyeon Woo
@@ -62,7 +62,7 @@ public class CharacterManager {
     public String currentCameraId;
     private String id;
     private TTS tts;
-    private boolean asap_enabled=false;
+    private boolean iava_enabled=false;
     private DistanceType distance=DistanceType.SOCIAL;
     private boolean isrunning=false;
 
@@ -85,12 +85,12 @@ public class CharacterManager {
     
     
 
-    public boolean isAsap_enabled() {
-        return asap_enabled;
+    public boolean isIava_enabled() {
+        return iava_enabled;
     }
 
-    public void setAsap_enabled(boolean asap_enabled) {
-        this.asap_enabled = asap_enabled;
+    public void setIava_enabled(boolean iava_enabled) {
+        this.iava_enabled = iava_enabled;
     }
 
     

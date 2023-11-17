@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package greta.auxiliary.asap;
+package greta.auxiliary.iava;
 
-import static greta.auxiliary.asap.ASAP.LOGGER;
+import static greta.auxiliary.iava.IAVA.LOGGER;
 import greta.core.animation.mpeg4.bap.BAPFrame;
 import greta.core.animation.mpeg4.bap.BAPFrameEmitter;
 import greta.core.animation.mpeg4.bap.BAPFrameEmitterImpl;
@@ -42,10 +42,10 @@ import javax.swing.JCheckBox;
  * @author Michele Grimaldi
  * @author Jieyeon Woo
  */
-public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrameEmitter{
+public class IAVAFrame extends javax.swing.JFrame implements AUEmitter, BAPFrameEmitter{
 
     /**
-     * Creates new form ASAPFrame
+     * Creates new form IAVAFrame
      */
     private Server server;
     private ArrayList<BAPFramePerformer> bap_perfomers = new ArrayList<>();
@@ -81,7 +81,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
     public double[] intensity = new double[MAX_AUS];
     public double blink = 0.0;
     public boolean isNull = false;
-    public ASAP asap_il;
+    public IAVA iava_il;
     boolean isPerforming = false;
     double timeConstantFrame = 0.04;
     
@@ -185,7 +185,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
         return auFeatureMasksMap.size()>MAX_AUS?MAX_AUS:auFeatureMasksMap.size();
     }
 
-    public ASAPFrame() {
+    public IAVAFrame() {
         initComponents();
         server = new Server();
         check_box_pairs.add(new Pair<>(au1,"AU01"));
@@ -529,7 +529,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
             try {
                 server.setAddress(address.getText());
                 server.setPort(port.getText());
-                System.out.println("greta.auxiliary.asap.ASAPFrame:" + server.port + "   " + server.address);
+                System.out.println("greta.auxiliary.iava.IAVAFrame:" + server.port + "   " + server.address);
                 server.startConnection();
                 Thread r1 = new Thread() {
                     @Override
@@ -541,11 +541,11 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
                                 String line2=server.receiveMessage();
                                 if(line2!=null && line2.length()>0)
                                 System.out.println("CLIENT:"+line2);
-                                loadASAP(line2);
+                                loadIAVA(line2);
                                 }
                                
                         } catch (IOException ex) {
-                            Logger.getLogger(ASAPFrame.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(IAVAFrame.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                 };
@@ -560,17 +560,17 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
                 r1.start();
                 r2.start();
             } catch (IOException ex) {
-                Logger.getLogger(ASAPFrame.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IAVAFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         } else {
-            System.out.println("greta.auxiliary.asap.ASAPFrame.connexionActionPerformed() UNCHECKED");
+            System.out.println("greta.auxiliary.iava.IAVAFrame.connexionActionPerformed() UNCHECKED");
             try {
                 // r2.join();
                 server.setStop(true);
                 server.stopConnection();
             } catch (IOException ex) {
-                Logger.getLogger(ASAPFrame.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IAVAFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
@@ -593,20 +593,20 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ASAPFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IAVAFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ASAPFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IAVAFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ASAPFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IAVAFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ASAPFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IAVAFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ASAPFrame().setVisible(true);
+                new IAVAFrame().setVisible(true);
             }
         });
     }
@@ -713,7 +713,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
         isNull = false;
     }
      
-      public void copy(ASAPFrame f) {
+      public void copy(IAVAFrame f) {
         frameNumber    = f.frameNumber;
         faceId         = f.faceId;
         timestamp      = f.timestamp;
@@ -734,7 +734,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
         return perform.isSelected();
     }
       
-      public int loadASAP(String line_data) {
+      public int loadIAVA(String line_data) {
         Logs.info(String.format(this.getClass().getSimpleName() + ".loadOpenFace(%s)",line_data));
        // System.out.println("line");
        
@@ -1087,7 +1087,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
             frame.setFrameNumber(time_frame);
             
             for (AUPerformer performer : au_perfomers) {
-//                asap_il.performAUAPFrame(frame, id);
+//                iava_il.performAUAPFrame(frame, id);
                 performer.performAUAPFrame(frame, id);
             }
         }
@@ -1102,7 +1102,7 @@ public class ASAPFrame extends javax.swing.JFrame implements AUEmitter, BAPFrame
 
         int p = 0;
         for (BAPFramePerformer performer : bap_perfomers) {
-            System.out.println("[INFO]:greta.auxiliary.asap.AUParserFilesReader.send()");
+            System.out.println("[INFO]:greta.auxiliary.iava.AUParserFilesReader.send()");
             performer.performBAPFrames(curr_bap_frames, id);
         }
         bapFrameEmitterImpl.sendBAPFrames(id, curr_bap_frames);

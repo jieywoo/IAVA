@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package greta.auxiliary.asap;
+package greta.auxiliary.iava;
 
 /**
  *
@@ -99,8 +99,8 @@ public class Server {
         System.out.println("Instantiating input and output streams...");
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in =  new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        System.out.println("greta.auxiliary.asap.Server.startConnection()");
-        System.out.println("greta.auxiliary.asap.Server.startConnection()");
+        System.out.println("greta.auxiliary.iava.Server.startConnection()");
+        System.out.println("greta.auxiliary.iava.Server.startConnection()");
     }
 
     public void sendMessage(String msg) throws IOException {

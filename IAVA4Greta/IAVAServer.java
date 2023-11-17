@@ -15,7 +15,7 @@ import static java.lang.Thread.MAX_PRIORITY;
 import java.net.*;  
 import java.util.logging.Level;
 import java.util.logging.Logger;
-public class ASAPServer {  
+public class IAVAServer {  
 
     public PrintWriter getOut() {
         return out;
@@ -60,12 +60,12 @@ public class ASAPServer {
     }
     
 
-    public ASAPServer(){
+    public IAVAServer(){
         port="4000";
         address="10.51.18.246";
     }
     
-    public ASAPServer(String p, String a){
+    public IAVAServer(String p, String a){
         port=p;
         address=a;
     }
@@ -99,8 +99,8 @@ public class ASAPServer {
         System.out.println("Instantiating input and output streams...");
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in =  new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        System.out.println("greta.auxiliary.asap.Server.startConnection()");
-        System.out.println("greta.auxiliary.asap.Server.startConnection()");
+        System.out.println("greta.auxiliary.iava.Server.startConnection()");
+        System.out.println("greta.auxiliary.iava.Server.startConnection()");
     }
 
     public void sendMessage(String msg) throws IOException {

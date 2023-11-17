@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package greta.auxiliary.asap;
+package greta.auxiliary.iava;
 
 import greta.core.util.CharacterManager;
 
@@ -22,22 +22,22 @@ import greta.core.util.enums.Side;
  * @author Michele Grimaldi
  * @author Jieyeon Woo
  */
-public class ASAP implements Runnable{
+public class IAVA implements Runnable{
 
     
-    protected static final Logger LOGGER = Logger.getLogger(ASAP.class.getName());
+    protected static final Logger LOGGER = Logger.getLogger(IAVA.class.getName());
     
-    protected ASAPFrame loader;
+    protected IAVAFrame loader;
     
     public CharacterManager cm;
     
     protected Thread thread;
     private AUEmitterImpl auEmitter = new AUEmitterImpl();
     private BAPFrameEmitterImpl bapFrameEmitter = new BAPFrameEmitterImpl();
-    protected final String threadName = ASAP.class.getSimpleName();
+    protected final String threadName = IAVA.class.getSimpleName();
     protected double frameDuration = 0.0;
-    protected ASAPFrame curFrame = new ASAPFrame();
-    protected ASAPFrame prevFrame = new ASAPFrame();
+    protected IAVAFrame curFrame = new IAVAFrame();
+    protected IAVAFrame prevFrame = new IAVAFrame();
     protected double fps = 0.0;
     protected double min_time = Double.MAX_VALUE;
     protected double max_time = 0.0;	
@@ -64,7 +64,7 @@ public class ASAP implements Runnable{
      * @param args the command line arguments
      */
     
-    public ASAP(CharacterManager cm, ASAPFrame loader){
+    public IAVA(CharacterManager cm, IAVAFrame loader){
         this.cm=cm;
         this.loader=loader;
         this.auLibrary = new AULibrary(cm);
@@ -110,25 +110,25 @@ public class ASAP implements Runnable{
 
 @Override
     public void run() {
-        LOGGER.info(String.format("Thread: %s running", ASAP.class.getName()));
+        LOGGER.info(String.format("Thread: %s running", IAVA.class.getName()));
         // Socket Connection
     }
 //
 //@Override    
 //public void performAUAPFrame (AUAPFrame auapAnimation, ID requestId) {
-//    sendFAPFrame(requestId, toFAPFrame_ASAP(auapAnimation));
+//    sendFAPFrame(requestId, toFAPFrame_IAVA(auapAnimation));
 //}
 //
 //@Override
 //    public void performAUAPFrames (List<AUAPFrame> auapsAnimation, ID requestId) {
 //        ArrayList<FAPFrame> fapFrames = new ArrayList<>(auapsAnimation.size());
 //        for (AUAPFrame auFrame : auapsAnimation) {
-//            fapFrames.add(toFAPFrame_ASAP(auFrame));
+//            fapFrames.add(toFAPFrame_IAVA(auFrame));
 //        }
 //        sendFAPFrames(requestId, fapFrames);
 //    }
 
-//public FAPFrame toFAPFrame_ASAP(AUAPFrame auFrame) {
+//public FAPFrame toFAPFrame_IAVA(AUAPFrame auFrame) {
 //        FAPFrame min = new FAPFrame(auFrame.getFrameNumber());
 //        FAPFrame max = new FAPFrame(auFrame.getFrameNumber());
 //        int[] upau_list = {1,2,4,5,6,7,43,61,62,63,64};
