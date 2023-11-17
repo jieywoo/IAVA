@@ -27,8 +27,8 @@ If you are interested in the CBT HAI DB, please contact the authors of the IAVA 
 
 ## Instructions
 IAVA consists of 2 main modules:
-- [Perception and Generation (PerceptNGen)](https://github.com/jieywoo/ASAP-Greta/tree/main/realtimeASAP): computes the user multimodal signal perception and the agent behavior generation (via ASAP model) in real-time and sends the agent's nonverbal generations to the Greta platform for the display,
-- [IAVA for Greta (IAVA4Greta)](https://github.com/jieywoo/ASAP-Greta/tree/main/gretaASAP): contains IAVA elements of real-time signal communication and visualization which needs to be integrated into the Greta platform ([Greta Main GITHUB](https://github.com/isir/greta/tree/gpl-grimaldi)).
+- [Perception and Generation (PerceptNGen)](https://github.com/jieywoo/IAVA/tree/main/PerceptNGen): computes the user multimodal signal perception and the agent behavior generation (via ASAP model) in real-time and sends the agent's nonverbal generations to the Greta platform for the display,
+- [IAVA for Greta (IAVA4Greta)](https://github.com/jieywoo/IAVA/tree/main/IAVA4Greta): contains IAVA elements of real-time signal communication and visualization which needs to be integrated into the Greta platform ([Greta Main GITHUB](https://github.com/isir/greta/tree/gpl-grimaldi)).
 
 Each section will be detailed in the sub-readme files within each part's directory.
 
@@ -61,7 +61,7 @@ To use the system, please follow the following instructions:
     ```
     python realtime_PerceptNGen.py
     ```
-    After closing the system program, the following output CSV files will be available (detailed in the [realtimeASAP sub-readme](https://github.com/jieywoo/ASAP-Greta/tree/main/realtimeASAP#readme)):
+    After closing the system program, the following output CSV files will be available (detailed in the [realtimeASAP sub-readme](https://github.com/jieywoo/IAVA/blob/main/PerceptNGen/README.md)):
         - Audio signals of the user
         - OpenFace and openSMILE features of the user and agent
     
