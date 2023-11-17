@@ -9,7 +9,7 @@ It ensures the two aspects:
 - generating real-time adaptive behavior,
 - managing natural dialogue.
 
-The agent adapts to its interlocutor linguistically (choosing its next conversational move via the dialogue manager including a LLM-based automatic thought classifier) and nonverbally (displaying reciprocally adaptive facial gestures via the [ASAP](https://github.com/jieywoo/ASAP/tree/main) model).
+The agent adapts to its interlocutor linguistically (choosing its next conversational move via the dialogue manager including a BERT-based (LLM-based) automatic thought classifier) and nonverbally (displaying reciprocally adaptive facial gestures via the [ASAP](https://github.com/jieywoo/ASAP/tree/main) model).
 
 Cognitive Behavioral Therapy (CBT) is chosen as our proof-of-concept, the agent acts as a therapist helping human users detect their negative automatic thoughts.
 
