@@ -8,6 +8,7 @@ package greta.FlipperDemo.input;
 /**
  *
  * @author Barnge
+ * @author Jieyeon Woo
  */
 
 import greta.FlipperDemo.main.FlipperLauncherMain;

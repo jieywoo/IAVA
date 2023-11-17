@@ -1,6 +1,8 @@
 from math import factorial
 import numpy as np
 
+# @author Jieyeon Woo
+
 def savitzky_golay(y, window_size=5, order=2, deriv=0, rate=1):
   try:
     window_size = np.abs(np.int(window_size))
@@ -23,8 +25,5 @@ def savitzky_golay(y, window_size=5, order=2, deriv=0, rate=1):
   return np.convolve( m[::-1], y, mode='valid')
 
 def leastSquareFilter(x, list_window_size, list_filter_idx_size):
-  # Manually identified size for each feature
-  # window_size = [10,10,10,3,3,3,3,3,3,3,10,10]
-  # filter_idx_size = [15,15,15,5,5,5,5,5,5,5,15,15]
   return [np.round(np.mean(savitzky_golay(x[:,f])[-list_filter_idx_size[f]:]),list_window_size[f]) for f in range(x.shape[1])]
 

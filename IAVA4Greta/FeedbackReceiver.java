@@ -16,6 +16,12 @@ import javax.json.JsonString;
 import javax.json.JsonValue;
 import java.util.concurrent.TimeUnit; //for time delay
 
+
+/**
+ *
+ * @author Jieyeon Woo
+ */
+
 public class FeedbackReceiver extends Receiver<String> {
 
 	private BlockingQueue<String> messages = new LinkedBlockingQueue();

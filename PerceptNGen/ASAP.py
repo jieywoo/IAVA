@@ -1,3 +1,13 @@
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense, LSTM
+import numpy as np
+import time
+from configparser import ConfigParser
+
+# @author Jieyeon Woo
+
 ###############################################################################
 # ASAP model
 # # Features from both Human & Agent (28 Features each)
@@ -6,13 +16,6 @@
 # # Audio features: 16 audio features
 # # # opensmile_feat_list = ['voiceProb', 'F0env', 'loudness', 'mfcc[0]', 'mfcc[1]', 'mfcc[2]', 'mfcc[3]', 'mfcc[4]', 'mfcc[5]', 'mfcc[6]', 'mfcc[7]', 'mfcc[8]', 'mfcc[9]', 'mfcc[10]', 'mfcc[11]', 'mfcc[12]']
 ###############################################################################
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Dense, LSTM
-import numpy as np
-import time
-from configparser import ConfigParser
 
 # Input features (ALL visual and audio features = tot of 28 features; 12 visual & 16 audio for each)
 IND_xij_U1V_rot = [i for i in range(0,3)]		

@@ -14,6 +14,8 @@ import pickle
 from threading import Thread, Event
 from configparser import ConfigParser
 
+# @author Jieyeon Woo
+
 # Options
 save_data = True
 save_raw_audio = True
