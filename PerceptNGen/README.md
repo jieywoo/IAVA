@@ -5,7 +5,7 @@ It computes the user multimodal signal perception and the agent behavior generat
 
 ## Requirements
 - OpenFace extracting user's visual features (AUs, pose, gaze) streaming in real-time via ZeroMQ;
-- Greta platform executing with the configuration of "Greta-ASAP-Cereproc.xml" or "Greta - ASR ASAP.xml";
+- Greta platform executing with the configuration of "Greta-IAVA-Cereproc.xml" or "Greta - ASR IAVA.xml";
 - Environment requirements:
   - Python 3.9.7
   - Tensorflow 2.4.1
@@ -43,10 +43,10 @@ record OpenFace and openSMILE features of the user and agent with features liste
     - OS: ['voiceProb', 'F0env', 'loudness', 'mfcc[0]', 'mfcc[1]', 'mfcc[2]', 'mfcc[3]', 'mfcc[4]', 'mfcc[5]', 'mfcc[6]', 'mfcc[7]', 'mfcc[8]', 'mfcc[9]', 'mfcc[10]', 'mfcc[11]', 'mfcc[12]']
 
 ## Usage guide
-To run the real-time ASAP system, OpenFace, and the Greta platform must be running before launching the main script of "realtime_PerceptNGen.py".
+To run the PerceptNGen module of the IAVA system, OpenFace, and the Greta platform must be running before launching the main script of "realtime_PerceptNGen.py".
 
 Start by changing the socket connection configurations by entering your IP addresses (please leave the port number as it is) in: *config.ini*\
-After launching the ASAP socket communication within the Greta platform, run the system.
+After launching the IAVA socket communication within the Greta platform, run the system.
 
 To run the system, run with:
 ```
