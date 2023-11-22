@@ -16,12 +16,12 @@ Cognitive Behavioral Therapy (CBT) is chosen as our proof-of-concept, the agent 
 ## Demo video
 A dyadic interaction between a human user and an adaptive CBT agent simulated via our IAVA system. The system loop consisting of user multimodal signal perception, agent behavior generation, signal communication, and visualization is assured to the frame level of 25 fps.
 
-[![IAVA DEMO](https://github.com/jieywoo/IAVA/assets/44306168/a4cea035-26f4-4574-ad81-9b3145cfaa98)](http://www.youtube.com/watch?v=9aZeSUxhf60)
+[![IAVA DEMO](https://github.com/jieywoo/IAVA/assets/44306168/7c0e5a07-74cc-4206-aab4-6684214e477a)](http://www.youtube.com/watch?v=9aZeSUxhf60)
 Please click to see the full demo video.
 
 ## CBT-HAI Database
 A database of 60 CBT human-agent interactions has been collected using the IAVA system.\
-<img src="https://github.com/jieywoo/IAVA/assets/44306168/6ae520d3-b78e-4a77-a0fb-f9d03399a52f" alt="drawing" width="200"/>
+<img src="https://github.com/jieywoo/IAVA/assets/44306168/9dbe8ec2-fd02-4dcb-a11e-392061e58f3f" alt="drawing" width="200"/>
 
 If you are interested in the CBT HAI DB, please contact the authors of the IAVA system.
 
